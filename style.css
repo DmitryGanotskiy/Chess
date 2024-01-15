@@ -1,0 +1,81 @@
+body{
+    background: linear-gradient(to top, rgb(255, 145, 0) 0%, rgb(60, 57, 57) 100%);
+}
+
+#game{
+    margin-left: 30%;
+}
+
+#gameboard{
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border: 15px solid black;
+    
+}
+
+#deadPiecesBlack{
+    width: 320px;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#deadPiecesWhite{
+    width: 320px;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.square{
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+
+.square svg {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    position: relative;
+    z-index: -9;
+}
+
+#timer {
+    font-size: 2em;
+    color: black;
+    text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black; 
+    margin-top: -300px;
+    margin-left: 400px;
+    position: absolute;
+}
+
+path{
+    position: relative;
+    z-index: -10;
+}
+
+.piece{
+    position: relative;
+    z-index: 9;
+}
+
+.gray{
+    background-color: rgb(110, 110, 98);
+}
+
+.brown{
+    background-color: rgb(157, 75, 8);
+}
+
+.black{
+    fill: gold
+}
+
+.white{
+    fill: silver
+}
