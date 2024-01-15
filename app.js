@@ -202,22 +202,22 @@ class ChessGame {
         if(this.playerGo === 'white'){
             if (direction > 0) { // left (kingside)
                 const rookSquare = document.querySelector(`[square-id="${targetId + 2}"]`)
-                document.querySelector(`[square-id="${targetId - 1}"]`).append(rookSquare.firstChild)
+                document.querySelector(`[square-id="${targetId - direction}"]`).append(rookSquare.firstChild)
                 this.changePlayer()
             } else if (direction < 0) { // right (queenside)
                 const rookSquare = document.querySelector(`[square-id="${targetId - 1}"]`)
-                document.querySelector(`[square-id="${targetId + 1}"]`).append(rookSquare.firstChild)
+                document.querySelector(`[square-id="${targetId - direction}"]`).append(rookSquare.firstChild)
                 this.changePlayer()
             }
         }
         else if(this.playerGo === 'black'){
             if (direction > 0) { // Kingside
                 const rookSquare = document.querySelector(`[square-id="${targetId + 1}"]`)
-                document.querySelector(`[square-id="${targetId - 1}"]`).appendChild(rookSquare.firstChild)
+                document.querySelector(`[square-id="${targetId - direction}"]`).appendChild(rookSquare.firstChild)
                 this.changePlayer()
             } else if (direction < 0) { // Queenside
                 const rookSquare = document.querySelector(`[square-id="${targetId - 2}"]`)
-                document.querySelector(`[square-id="${targetId + 1}"]`).appendChild(rookSquare.firstChild)
+                document.querySelector(`[square-id="${targetId - direction}"]`).appendChild(rookSquare.firstChild)
                 this.changePlayer()
             }
         }
